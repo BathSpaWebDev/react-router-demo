@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# React Router Demo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Instructions
+
+Clone the repo to your computer, and run  `npm install` inside the repo. Then start the server(see below).
 
 ## Available Scripts
 
