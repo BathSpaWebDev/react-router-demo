@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/home";
+import Contact from "./components/pages/contact";
+import About from "./components/pages/about";
+import Layout from "./components/layout/main";
+import Article from "./components/pages/article";
+import { articles } from "./data/articles";
 
 function App() {
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            {articles.map(article => (
+              <Route key={article.title}
+                path={'articles/' + article.url} 
+                element={
+                  <Article 
+                    title={article.title} 
+                    intro={article.intro} 
+                    body={article.body}
+                  />
+                } 
+              />
+            ))}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
