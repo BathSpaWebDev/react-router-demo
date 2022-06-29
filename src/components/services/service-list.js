@@ -1,9 +1,12 @@
 import ServiceBlock from "./service-block";
+import { useState } from "react";
 
+function ServiceList({theme}) {
 
-function ServiceList() {
+   
+
     return (
-      <div className="ServiceList">
+      <div className={`ServiceList ${theme}`}>
 
         <ServiceBlock 
             title="Web design" 
@@ -13,6 +16,7 @@ function ServiceList() {
                 `
             } 
             imgSrc="https://picsum.photos/200/300"
+            theme={theme}
         />
         
 
@@ -24,6 +28,7 @@ function ServiceList() {
                 `
             } 
             imgSrc="https://picsum.photos/200/300"
+            theme={theme}
         />
         
       </div>

@@ -7,9 +7,17 @@
 
 /* Service List */
 
+
 .ServiceList {
   display:flex;
   gap: 1rem;
+  padding:1rem;
+}
+.ServiceList.theme1 {
+  background-color: aquamarine;
+}
+.ServiceList.theme2 {
+  background-color: rgb(83, 178, 95);
 }
 
 /* Service Block */

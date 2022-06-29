@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
+import { useState } from "react";
 
-const Layout = () => {
+const Layout = ({changeTheme}) => {
 
   return (
     <>
@@ -18,6 +19,7 @@ const Layout = () => {
         </ul>
       </nav>
       <div className="page-wrapper">
+        <button onClick={changeTheme}>Change theme state</button>
         <Outlet />
       </div>
       

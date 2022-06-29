@@ -1,10 +1,11 @@
 import { articles } from "../../data/articles";
 
-function Home() {
+function Home({theme}) {
 
     return (
       <div className="Home">
         <h1>Homepage</h1>
+        {theme === 'theme1' ? <h2>This is theme 1</h2> : '' }
         <h3>All articles</h3>
         {articles.map(article => (
             <div>

@@ -1,13 +1,17 @@
 import ServiceList from "../services/service-list";
+import Block from "../general/block";
 
-function About() {
+function About({theme}) {
     return (
       <div className="About">
-        <h1>About Us</h1>
+        
         <h2>Services</h2>
 
-        <ServiceList />
+        <Block buttonText="Custom button text" />
 
+        <ServiceList theme={theme} />
+
+        
       </div>
     );
   }
