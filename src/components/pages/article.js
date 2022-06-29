@@ -10,6 +10,7 @@ function Article({title, body, intro}) {
         <h1>{title}</h1>
         <p><b>{intro}</b></p>
         <p>{body}</p>
+        {slug}
       </div>
     );
   }

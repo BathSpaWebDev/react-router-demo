@@ -7,9 +7,8 @@ import Layout from "./components/layout/main";
 import Article from "./components/pages/article";
 import { articles } from "./data/articles";
 
-function App() {
 
- 
+function App() {
 
   return (
     <BrowserRouter>

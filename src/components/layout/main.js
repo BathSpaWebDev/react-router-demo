@@ -17,7 +17,11 @@ const Layout = () => {
           </li>
         </ul>
       </nav>
-      <Outlet />
+      <div className="page-wrapper">
+        <Outlet />
+      </div>
+      
+
     </>
   )
 };
