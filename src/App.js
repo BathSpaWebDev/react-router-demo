@@ -20,7 +20,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             {articles.map(article => (
               <Route key={article.title}
-                path={'articles/' + article.url} 
+                path="articles/:slug"
                 element={
                   <Article 
                     title={article.title} 

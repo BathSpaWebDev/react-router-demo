@@ -1,6 +1,9 @@
+import { useParams } from 'react-router-dom';
+
 function Article({title, body, intro}) {
 
-
+    const { slug } = useParams();
+    
     return (
       <div className="Article">
         <a href="/">Back to home</a>
